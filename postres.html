@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postres - Pizzería</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>🍰 Menú de Postres</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Carrito</a>
+        
+        </nav>
+
+        <ul class="menu">
+            <li class="submenu">
+                <a href="menu.html">Menú ▼</a>
+                <ul class="submenu-items">
+                    <li><a href="menu.html">🍕 Pizzas</a></li>
+                    <li><a href="bebidas.html">🥤 Bebidas</a></li>
+                    <li><a href="postres.html">🍰 Postres</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    </header>
+
+    <section class="productos">
+        <div class="producto">
+            <img src="/mi-app-pizzeria/images/brownie.jpg" alt="Pastel de Chocolate">
+            <h2>Brownie</h2>
+            <p>$50.00</p>
+            <button class="btn-agregar" data-nombre="Refresco 2lts" data-precio="25.00">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/mi-app-pizzeria/images/alitas.png" alt="Helado">
+            <h2>Alitas</h2>
+            <p>$60.00</p>
+            <button class="btn-agregar" data-nombre="Alitas" data-precio="60.00">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="/mi-app-pizzeria/images/papotas.png" alt="Tiramisú">
+            <h2>Papotas</h2>
+            <p>$45.00</p>
+            <button class="btn-agregar" data-nombre="Papotas" data-precio="45.00">Agregar al carrito</button>
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

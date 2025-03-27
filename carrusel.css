@@ -1,0 +1,55 @@
+/* Contenedor del carrusel */
+.carrusel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Carrusel */
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Cada slide del carrusel */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+/* Imagen de la promoción */
+.slide img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* Información de la promoción */
+.promo-info {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }

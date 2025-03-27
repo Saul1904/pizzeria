@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Pizzas - Pizza Delivery</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+    </div>
+    
+    
+    
+    <header>
+        
+        <a href="index.html">
+            <img src="/mi-app-pizzeria/images/logodos.png" alt="Mi Logo" id="logo">
+        </a>
+    
+        <h1>🍕 Menú de Pizzas</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">🍕Menú</a>
+            <a href="contacto.html">📞 Contacto</a>
+            <a href="carrito.html">🛒Carrito</a>
+
+        </nav>
+        
+            <ul class="menu">
+                <li class="submenu">
+                    <a href="menu.html">Menú ▼</a>
+                    <ul class="submenu-items">
+                        <li><a href="menu.html">🍕 Pizzas</a></li>
+                        <li><a href="bebidas.html">🥤 Bebidas</a></li>
+                        <li><a href="postres.html">🍰 Postres</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+        
+        
+    </header>
+    <div class="busqueda-filtro">
+        <input 
+            type="text" 
+            id="buscador" 
+            placeholder="🔍 Buscar pizza..." 
+        />
+    
+        <select id="filtroCategoria">
+            <option value="todas">Todas</option>
+            <option value="clasicas">Clásicas</option>
+            <option value="especiales">Especiales</option>
+            <option value="vegetarianas">Vegetarianas</option>
+        </select>
+    </div>
+    
+    <main class="menu-container">
+        <div class="pizza-item" data-categoria="clasicas">
+            <img src="/mi-app-pizzeria/images/pizza-peperonni.png" alt="Pizza de Pepperoni">
+            <h3>Pizza de Pepperoni</h3>
+            <p>La clásica que nunca falla.</p>
+            <span>$150 MXN</span>
+            <button class="btn-agregar" data-nombre="Pizza de Pepperoni" data-precio="150">Agregar al carrito</button>
+            <button class="btn-opiniones" data-id="pepperoni">Opiniones</button>
+            
+        </div>
+
+        
+        
+        <!-- Modal (se oculta al inicio) -->
+<div id="modal-opiniones" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        <h4>Opiniones</h4>
+        <ul id="lista-opiniones"></ul>
+        
+        <h5>Deja tu Opinión</h5>
+        <form id="form-opinion">
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+            <textarea id="comentario" placeholder="Escribe tu opinión..." required></textarea>
+            <select id="calificacion">
+                <option value="5">⭐⭐⭐⭐⭐ - Excelente</option>
+                <option value="4">⭐⭐⭐⭐ - Muy buena</option>
+                <option value="3">⭐⭐⭐ - Normal</option>
+                <option value="2">⭐⭐ - Mala</option>
+                <option value="1">⭐ - Pésima</option>
+            </select>
+            <button type="submit">Enviar Opinión</button>
+        </form>
+    </div>
+</div>
+    
+</div>
+        
+        
+        <div class="pizza-item" data-categoria="clasicas">
+            <img src="/mi-app-pizzeria/images/pizza-hawaiana.png" alt="Pizza Hawaiana">
+            <h3>Pizza Hawaiana</h3>
+            <p>Piña, jamón y queso fundido.</p>
+            <span>$140 MXN</span>
+            <button class="btn-agregar" data-nombre="Pizza Hawaiana" data-precio="140">Agregar al carrito</button>
+            <button class="btn-opiniones" data-id="Hawaiana">Opiniones</button>
+        </div>
+
+        
+        <div class="pizza-item" data-categoria="clasicas">
+            <img src="/mi-app-pizzeria/images/pizza-cuatroquesos.png" alt="Pizza 4 Quesos">
+            <h3>Pizza 4 Quesos</h3>
+            <p>Para los amantes del queso.</p>
+            <span>$160 MXN</span>
+            <button class="btn-agregar" data-nombre="Pizza 4 Quesos" data-precio="160">Agregar al carrito</button>
+            <button class="btn-opiniones" data-id="4 Quesos">Opiniones</button>
+        </div>
+
+        <div class="pizza-item" data-categoria="vegetarianas">
+            <img src="/mi-app-pizzeria/images/pizzachampi.png" alt="Pizza Champiñones">
+            <h3>Pizza Champiñones</h3>
+            <p>Saborea la magia de los champiñones en cada rebanada. 🍕🍄.</p>
+            <span>$180 MXN</span>
+            <button class="btn-agregar" data-nombre="Pizza Champiñones" data-precio="180">Agregar al carrito</button>
+            <button class="btn-opiniones" data-id="Champiñones">Opiniones</button>
+        </div>
+
+        <div class="pizza-item" data-categoria="clasicas">
+            <img src="/mi-app-pizzeria/images/pizzapollo.jpg" alt="Pizza Pollo">
+            <h3>Pizza Pollo</h3>
+            <p>Sabor jugoso en cada mordida. ¡Pizza de pollo irresistible! 🍕🔥.</p>
+            <span>$200 MXN</span>
+            <button class="btn-agregar" data-nombre="Pizza Pollo" data-precio="200">Agregar al carrito</button>
+            <button class="btn-opiniones" data-id="Champiñones">Opiniones</button>
+        </div>
+
+        <div class="pizza-item" data-categoria="clasicas">
+            <img src="/mi-app-pizzeria/images/pizzachori.png" alt="Pizza Chorizzo">
+            <h3>Pizza Chorizzo</h3>
+            <p>El sabor del chorizo que enciende tu paladar. ¡Deliciosa pizza! 🍕🌶️.</p>
+            <span>$210 MXN</span>
+            <button class="btn-agregar" data-nombre="Pizza Chorizo" data-precio="210">Agregar al carrito</button>
+            <button class="btn-opiniones" data-id="Champiñones">Opiniones</button>
+        </div>
+
+        <div class="pizza-item" data-categoria="especiales">
+            <img src="/mi-app-pizzeria/images/pizzacarne.png" alt="Pizza Carne Molida">
+            <h3>Pizza Carne Molida</h3>
+            <p>El poder de la carne molida en cada bocado. ¡Una pizza llena de sabor! 🍕🍖</p>
+            <span>$190 MXN</span>
+            <button class="btn-agregar" data-nombre="Pizza Carne Molida" data-precio="190">Agregar al carrito</button>
+            <button class="btn-opiniones" data-id="Champiñones">Opiniones</button>
+        </div>
+
+        <div class="pizza-item" data-categoria="vegetarianas">
+            <img src="/mi-app-pizzeria/images/pizzamarg.png" alt="Pizza Margarita">
+            <h3>Pizza Margarita</h3>
+            <p>Clásica, fresca y deliciosa. La pizza Margarita en su máxima expresión. 🍕🌿.</p>
+            <span>$160 MXN</span>
+            <button class="btn-agregar" data-nombre="Pizza Margarita" data-precio="160">Agregar al carrito</button>
+            <button class="btn-opiniones" data-id="Champiñones">Opiniones</button>
+        </div>
+
+        <div class="pizza-item" data-categoria="vegetarianas">
+            <img src="/mi-app-pizzeria/images/pizzavege.png" alt="Pizza Vegetariana">
+            <h3>Pizza Vegetariana</h3>
+            <p>Color, frescura y sabor en cada rebanada. ¡La pizza vegetariana te conquistará! 🍕🥦.</p>
+            <span>$150 MXN</span>
+            <button class="btn-agregar" data-nombre="Pizza Vegetariana" data-precio="150">Agregar al carrito</button>
+            <button class="btn-opiniones" data-id="Champiñones">Opiniones</button>
+        </div>
+
+        <div class="pizza-item" data-categoria="especiales">
+            <img src="/mi-app-pizzeria/images/pizzaspecial.png" alt="Pizza Especial">
+            <h3>Pizza Especial</h3>
+            <p>Una combinación única de sabores que te sorprenderá en cada bocado. ¡Pizza especial para los más exigentes! 🍕✨.</p>
+            <span>$220 MXN</span>
+            <button class="btn-agregar" data-nombre="Pizza Especial" data-precio="220">Agregar al carrito</button>
+            <button class="btn-opiniones" data-id="Champiñones">Opiniones</button>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Pizza Delivery. Todos los derechos reservados.</p>
+            
+        </div>
+    </footer>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+

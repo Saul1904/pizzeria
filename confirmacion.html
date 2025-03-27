@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Pedido - Pizza Delivery</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="/mi-app-pizzeria/images/logodos.png" alt="Mi Logo" id="logo">
+        </a>
+        <h1>✅ Pedido Confirmado</h1>
+    </header>
+
+    <main class="confirmacion-container">
+        <h2>🎉 ¡Gracias por tu compra!</h2>
+        <p><strong>Total original:</strong> <span id="totalOriginal"></span></p>
+        <p><strong>Descuento aplicado:</strong> -<span id="descuentoAplicado"></span></p>
+        <p><strong>Total a pagar:</strong> <span id="totalConfirmacion"></span></p>
+        <p><strong>Método de pago:</strong> <span id="metodoConfirmacion"></span></p>
+        <p>📍 Dirección de Envío: <span id="direccionConfirmacion">No especificada</span></p>
+
+    
+        <a href="index.html" class="btn-volver">Volver al Inicio</a>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Pizza Delivery. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    let totalFinal = parseFloat(localStorage.getItem("totalFinal")) || 0;
+    let descuento = parseFloat(localStorage.getItem("descuentoAplicado")) || 0;
+    let metodoPago = localStorage.getItem("metodoPago") || "No seleccionado";
+    let direccionEnvio = localStorage.getItem("direccionEnvio") || "No especificada";
+
+    let totalOriginal = (totalFinal + descuento).toFixed(2);
+
+    document.getElementById("totalOriginal").innerText = `$${totalOriginal} MXN`;
+    document.getElementById("descuentoAplicado").innerText = `-$${descuento.toFixed(2)} MXN`;
+    document.getElementById("totalConfirmacion").innerText = `$${totalFinal.toFixed(2)} MXN`;
+    document.getElementById("metodoConfirmacion").innerText = metodoPago;
+    document.getElementById("direccionConfirmacion").innerText = direccionEnvio;
+});
+
+
+    </script>
+    
+</body>
+</html>

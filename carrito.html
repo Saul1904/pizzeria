@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Pizza Delivery</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+    </div>
+    
+    <header>
+        
+        <a href="index.html">
+            <img src="/mi-app-pizzeria/images/logodos.png" alt="Mi Logo" id="logo">
+        </a>
+    
+        <h1>🛒 Carrito de Compras</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">🍕Menú</a>
+            <a href="contacto.html">📞 Contacto</a>
+            <a href="carrito.html">🛒Carrito</a>
+
+        </nav>
+    </header>
+
+    
+
+    <div class="entrega-container">
+        <h2>📍 Calcula tu tiempo de entrega</h2>
+        <input 
+            type="text" 
+            id="direccion" 
+            placeholder="Ingresa tu dirección..."
+        />
+        <button id="btnCalcularEntrega">Calcular Tiempo de Entrega</button>
+        <p id="tiempoEntrega"></p>
+    </div>
+
+    <div class="cupon-container">
+        <h2>🎟️ ¿Tienes un cupón de descuento?</h2>
+        <input 
+            type="text" 
+            id="codigoCupon" 
+            placeholder="Ingresa tu código de cupón..."
+        />
+        <button id="btnAplicarCupon">Aplicar Cupón</button>
+        <p id="mensajeCupon"></p>
+    </div>
+
+    
+
+    <main class="carrito-container">
+        <h2>Resumen de tu pedido</h2>
+        <div id="listaCarrito"></div>
+        <p id="totalCarrito"><strong>Total:</strong> $0 MXN</p>
+        <button id="btnVaciarCarrito" class="btn-vaciar">Vaciar Carrito</button>
+    </main>
+
+    <div class="direccion-container">
+        <h2>🏠 Dirección de Envío</h2>
+        <input type="text" id="direccionEnvio" placeholder="Ingresa tu dirección..." required>
+        <p id="mensajeDireccion"></p>
+    </div>
+    
+
+    <div class="pago-container">
+        <h2>💳 Elige tu método de pago</h2>
+    
+        <label>
+            <input type="radio" name="metodoPago" value="tarjeta" checked>
+            Tarjeta de Crédito / Débito 💳
+        </label>
+    
+        <label>
+            <input type="radio" name="metodoPago" value="paypal">
+            PayPal 🅿️
+        </label>
+    
+        <label>
+            <input type="radio" name="metodoPago" value="efectivo">
+            Pago en Efectivo 💵
+        </label>
+    
+        <div id="pagoDetalles"></div>
+    
+        <button id="btnConfirmarPago">Confirmar Pago</button>
+        <p id="mensajePago"></p>
+    </div>
+
+    
+    
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Pizza Delivery. Todos los derechos reservados.</p>
+            
+        </div>
+    </footer>
+    
+
+    <script src="js/app.js"></script>
+   
+    
+
+    
+
+</body>
+</html>

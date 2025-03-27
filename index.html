@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Delivery - Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carrusel.css">
+</head>
+<body>
+    <div class="loader-container" id="loader">
+        <div class="loader"></div>
+    </div>
+
+    
+    
+    
+    <header>
+        
+        <nav>
+            <div class="user-section">
+                <span id="userName"></span>
+                <a href="login.html" id="btnLogin">Iniciar Sesión</a>
+                <button id="btnLogout" style="display: none;">Cerrar Sesión</button>
+            </div>
+        </nav>
+        
+       
+            <a href="index.html">
+                <img src="/mi-app-pizzeria/images/logodos.png" alt="Mi Logo" id="logo">
+            </a>
+        
+        
+        
+        <h1>¡Bienvenido a Pizza Delivery!</h1> 
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="menu.html">🍕Menú</a>
+            <a href="contacto.html">📞 Contacto</a>
+            <a href="carrito.html">🛒Carrito</a>
+            
+        </nav>
+        
+    </header>
+
+
+    <main>
+        <section class="destacadas">
+            <h2>🍕 Pizzas Destacadas</h2>
+            <p>Las mejores pizzas al mejor precio, ¡pruébalas hoy!</p>
+        </section>
+    </main>
+
+
+    <main>
+        <section class="hero">
+            <h2>¡Las pizzas más deliciosas están aquí! 🍕</h2>
+            <p>Recién horneadas, con ingredientes frescos y entregadas en tiempo récord.</p>
+            <a href="menu.html" class="btn-menu">Ver Menú</a>
+        </section>
+
+        <section class="especiales">
+            <h1>🎉 Promociones Especiales</h1>
+
+    <div class="carrusel-container">
+        <div class="carrusel">
+            <div class="slide">
+                <img src="/mi-app-pizzeria/images/promouno.jpg" alt="Promo 1">
+                <div class="promo-info">
+                    <h2>Super Especial De Pizza 🍕🥤</h2>
+                    <p>1 pizza grande + Refresco 2 lts</p>
+                    <p><strong>Precio: $495 MXN</strong></p>
+                    <button onclick="agregarPromoAlCarrito('Super Especial De Pizza', 495)">¡Lo quiero!</button>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="/mi-app-pizzeria/images/promodos.jpg" alt="Promo 2">
+                <div class="promo-info">
+                    <h2>Paquete Especial🔥</h2>
+                    <p>1 pizza grande + 10 papotas + Refresco 2 lts</p>
+                    <p><strong>Precio: $299 MXN</strong></p>
+                    <button onclick="agregarPromoAlCarrito('Paquete Especial', 299)">¡Lo quiero!</button>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="/mi-app-pizzeria/images/promocuatro.jpg" alt="Promo 3">
+                <div class="promo-info">
+                    <h2>Pizza Big Familiar 🧀</h2>
+                    <p>Pizza + 8 alitas + Refresco 2 lts</p>
+                    <p><strong>Precio: $439 MXN</strong></p>
+                    <button onclick="agregarPromoAlCarrito('Pizza Big Familiar', 439)">¡Lo quiero!</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="prev" onclick="moverCarrusel(-1)">❮</button>
+        <button class="next" onclick="moverCarrusel(1)">❯</button>
+    </div>
+        
+        
+    
+        <section class="destacadas">
+            <h2>🍕 Pizzas Destacadas</h2>
+            <div class="pizzas-container">
+                <main class="menu-container">
+                    <div class="pizza-item" data-categoria="clasicas">
+                        <img src="/mi-app-pizzeria/images/pizza-peperonni.png" alt="Pizza de Pepperoni">
+                        <h3>Pizza de Pepperoni</h3>
+                        <p>La clásica que nunca falla.</p>
+                        <span>$150 MXN</span>
+                        <button class="btn-agregar" data-nombre="Pizza de Pepperoni" data-precio="150">Agregar al carrito</button>
+                        
+                    </div>
+    
+                    <div class="pizza-item" data-categoria="clasicas">
+                        <img src="/mi-app-pizzeria/images/pizza-hawaiana.png" alt="Pizza Hawaiana">
+                        <h3>Pizza Hawaiana</h3>
+                        <p>Piña, jamón y queso fundido.</p>
+                        <span>$140 MXN</span>
+                        <button class="btn-agregar" data-nombre="Pizza Hawaiana" data-precio="140">Agregar al carrito</button>
+                    </div>
+    
+                    <div class="pizza-item" data-categoria="clasicas">
+                        <img src="/mi-app-pizzeria/images/pizza-cuatroquesos.png" alt="Pizza 4 Quesos">
+                        <h3>Pizza 4 Quesos</h3>
+                        <p>Para los amantes del queso.</p>
+                        <span>$160 MXN</span>
+                        <button class="btn-agregar" data-nombre="Pizza 4 Quesos" data-precio="160">Agregar al carrito</button>
+
+                    </div>
+            </div>
+        </section>
+        </section>
+    </main>
+    
+    
+    <footer>
+        <p>&copy; 2025 Pizza Delivery. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/carrusel.js"></script>
+    
+</body>
+</html>
